@@ -1,0 +1,7 @@
+# .github/metadata.yaml
+# Triaged by AI-assisted bulk pass (2026-04-29).
+description: "Type-safe FontAwesome 6 icons for Swift HTML DSL with compile-time safety and multiple loading strategies."
+topics:
+  - foundations
+  - html
+homepage: "https://swift-institute.org"
