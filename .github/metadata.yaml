@@ -5,3 +5,6 @@ topics:
   - foundations
   - html
 homepage: "https://swift-institute.org"
+
+socialPreview:
+  displayName: "HTML|Font Awesome"
