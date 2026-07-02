@@ -1,6 +1,6 @@
 # swift-html-fontawesome
 
-[![CI](https://github.com/coenttb/swift-html-fontawesome/workflows/CI/badge.svg)](https://github.com/coenttb/swift-html-fontawesome/actions/workflows/ci.yml)
+[![CI](https://github.com/swift-foundations/swift-html-fontawesome/workflows/CI/badge.svg)](https://github.com/swift-foundations/swift-html-fontawesome/actions/workflows/ci.yml)
 ![Development Status](https://img.shields.io/badge/status-active--development-blue.svg)
 
 Type-safe FontAwesome 6 icons for Swift HTML DSL with compile-time safety and multiple loading strategies.
@@ -26,7 +26,7 @@ Add to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/coenttb/swift-html-fontawesome", from: "0.0.1")
+    .package(url: "https://github.com/swift-foundations/swift-html-fontawesome", from: "0.0.1")
 ]
 ```
 
@@ -207,7 +207,7 @@ This package supports all FontAwesome Pro features:
 
 ### Dependencies
 
-- [swift-html](https://github.com/coenttb/swift-html): The Swift library for domain-accurate and type-safe HTML & CSS.
+- [swift-html](https://github.com/swift-foundations/swift-html): The Swift library for domain-accurate and type-safe HTML & CSS.
 
 ## License
 
@@ -217,4 +217,4 @@ This package is licensed under the Apache License 2.0. See [LICENSE](LICENSE.md)
 
 ## Contributing
 
-Contributions are welcome. Please open an issue or pull request on [GitHub](https://github.com/coenttb/swift-html-fontawesome).
+Contributions are welcome. Please open an issue or pull request on [GitHub](https://github.com/swift-foundations/swift-html-fontawesome).
