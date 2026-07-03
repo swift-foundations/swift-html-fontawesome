@@ -1,5 +1,3 @@
-import Foundation
-
 public enum FontAwesomeAnimation: String, Sendable, CaseIterable {
     case beat = "fa-beat"
     case beatFade = "fa-beat-fade"

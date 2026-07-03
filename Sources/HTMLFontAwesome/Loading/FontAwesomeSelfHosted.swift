@@ -1,4 +1,3 @@
-import Foundation
 import HTML
 
 public struct FontAwesomeSelfHosted: FontAwesomeLoader {

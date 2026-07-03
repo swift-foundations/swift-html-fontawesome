@@ -1,4 +1,3 @@
-import Foundation
 import HTML
 
 public struct FontAwesomeLabel<Title: HTML>: HTML {

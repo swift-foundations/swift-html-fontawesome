@@ -1,5 +1,3 @@
-import Foundation
-
 public enum FontAwesomeStyle: String, Sendable, CaseIterable {
     case solid = "fas"
     case regular = "far"

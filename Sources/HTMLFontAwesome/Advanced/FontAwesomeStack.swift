@@ -1,4 +1,3 @@
-import Foundation
 import HTML
 
 public struct FontAwesomeStack<Content: HTML>: HTML {

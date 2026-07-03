@@ -1,5 +1,3 @@
-import Foundation
-
 extension FontAwesomeIcon {
     public static let check = FontAwesomeIcon("check")
     public static let times = FontAwesomeIcon("times")
