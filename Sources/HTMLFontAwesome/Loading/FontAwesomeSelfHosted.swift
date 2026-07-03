@@ -29,7 +29,7 @@ public struct FontAwesomeSelfHosted: FontAwesomeLoader {
                 rel: "stylesheet"
             )
 
-            if let jsPath = jsPath {
+            if let jsPath {
                 script(
                     src: jsPath,
                     async: async,

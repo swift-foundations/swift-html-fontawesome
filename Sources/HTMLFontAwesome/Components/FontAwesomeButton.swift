@@ -42,6 +42,7 @@ public struct FontAwesomeButton<Content: HTML>: HTML {
                 icon
                     .marginRight(.lengthPercentage(spacing))
                 content
+
             case .trailing:
                 content
                 icon

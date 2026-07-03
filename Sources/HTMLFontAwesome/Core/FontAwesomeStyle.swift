@@ -14,6 +14,7 @@ public enum FontAwesomeStyle: String, Sendable, CaseIterable {
         switch self {
         case .solid, .regular, .brands:
             return false
+
         case .light, .thin, .duotone:
             return true
         }

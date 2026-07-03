@@ -64,15 +64,15 @@ public struct FontAwesomeIcon: HTML, Sendable {
             classes.append("fa-fw")
         }
 
-        if let animation = animation {
+        if let animation {
             classes.append(animation.className)
         }
 
-        if let rotation = rotation {
+        if let rotation {
             classes.append(rotation.className)
         }
 
-        if let flip = flip {
+        if let flip {
             classes.append(flip.className)
         }
 
@@ -80,7 +80,7 @@ public struct FontAwesomeIcon: HTML, Sendable {
             classes.append("fa-border")
         }
 
-        if let pull = pull {
+        if let pull {
             classes.append(pull.className)
         }
 

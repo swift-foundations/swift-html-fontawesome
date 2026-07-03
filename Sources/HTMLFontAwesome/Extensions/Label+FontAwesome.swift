@@ -50,6 +50,7 @@ public struct FontAwesomeLabel<Title: HTML>: HTML {
                     title
                 }
                 .marginLeft(.lengthPercentage(spacing))
+
             case .trailing:
                 span {
                     title

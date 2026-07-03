@@ -43,19 +43,19 @@ public struct FontAwesomeDuotone: HTML {
     private var styleString: String {
         var styles: [String] = []
 
-        if let primaryColor = primaryColor {
+        if let primaryColor {
             styles.append("--fa-primary-color: \(primaryColor)")
         }
 
-        if let primaryOpacity = primaryOpacity {
+        if let primaryOpacity {
             styles.append("--fa-primary-opacity: \(primaryOpacity)")
         }
 
-        if let secondaryColor = secondaryColor {
+        if let secondaryColor {
             styles.append("--fa-secondary-color: \(secondaryColor)")
         }
 
-        if let secondaryOpacity = secondaryOpacity {
+        if let secondaryOpacity {
             styles.append("--fa-secondary-opacity: \(secondaryOpacity)")
         }
 
