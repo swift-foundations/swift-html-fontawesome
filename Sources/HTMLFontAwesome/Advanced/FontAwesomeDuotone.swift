@@ -23,7 +23,9 @@ public struct FontAwesomeDuotone: HTML.View {
         self.secondaryOpacity = secondaryOpacity
         self.size = size
     }
+}
 
+extension FontAwesomeDuotone {
     public var body: some HTML.View {
         i {
             HTML.Empty()

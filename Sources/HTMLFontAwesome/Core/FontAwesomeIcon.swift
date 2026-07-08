@@ -45,6 +45,15 @@ public struct FontAwesomeIcon: HTML.View, Sendable {
         self.title = title
     }
 
+}
+
+extension FontAwesomeIcon: ExpressibleByStringLiteral {
+    public init(stringLiteral value: StringLiteralType) {
+        self.init(value)
+    }
+}
+
+extension FontAwesomeIcon {
     public var body: some HTML.View {
         i {}
             .attribute("class", classString)
@@ -88,15 +97,7 @@ public struct FontAwesomeIcon: HTML.View, Sendable {
 
         return classes.joined(separator: " ")
     }
-}
 
-extension FontAwesomeIcon: ExpressibleByStringLiteral {
-    public init(stringLiteral value: StringLiteralType) {
-        self.init(value)
-    }
-}
-
-extension FontAwesomeIcon {
     public func size(_ size: FontAwesomeSize) -> Self {
         FontAwesomeIcon(
             name,

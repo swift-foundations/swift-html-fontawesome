@@ -7,10 +7,6 @@ public struct FontAwesomeCDN: FontAwesomeLoader {
     public let `defer`: Defer
     public let async: Async
 
-    public var loadingStrategy: LoadingStrategy {
-        .cdn(version: version)
-    }
-
     public init(
         version: String = "6.5.1",
         integrity: Integrity? = nil,
@@ -23,6 +19,12 @@ public struct FontAwesomeCDN: FontAwesomeLoader {
         self.crossorigin = crossorigin
         self.defer = `defer`
         self.async = async
+    }
+}
+
+extension FontAwesomeCDN {
+    public var loadingStrategy: LoadingStrategy {
+        .cdn(version: version)
     }
 
     public var body: some HTML.View {
@@ -45,10 +47,6 @@ public struct FontAwesomeCDNScript: FontAwesomeLoader {
     public let crossorigin: Crossorigin?
     public let `defer`: Defer
     public let async: Async
-
-    public var loadingStrategy: LoadingStrategy {
-        .cdn(version: version)
-    }
 
     public init(
         version: String = "6.5.1",
@@ -86,5 +84,11 @@ public struct FontAwesomeCDNScript: FontAwesomeLoader {
             rel: .stylesheet
         )
 
+    }
+}
+
+extension FontAwesomeCDNScript {
+    public var loadingStrategy: LoadingStrategy {
+        .cdn(version: version)
     }
 }

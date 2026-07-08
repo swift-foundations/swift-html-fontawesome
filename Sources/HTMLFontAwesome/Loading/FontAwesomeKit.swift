@@ -5,10 +5,6 @@ public struct FontAwesomeKit: FontAwesomeLoader {
     public let async: Async
     public let crossorigin: Crossorigin?
 
-    public var loadingStrategy: LoadingStrategy {
-        .kit(id: kitId)
-    }
-
     public init(
         kitId: String,
         async: Async = true,
@@ -17,6 +13,12 @@ public struct FontAwesomeKit: FontAwesomeLoader {
         self.kitId = kitId
         self.async = async
         self.crossorigin = crossorigin
+    }
+}
+
+extension FontAwesomeKit {
+    public var loadingStrategy: LoadingStrategy {
+        .kit(id: kitId)
     }
 
     public var body: some HTML.View {

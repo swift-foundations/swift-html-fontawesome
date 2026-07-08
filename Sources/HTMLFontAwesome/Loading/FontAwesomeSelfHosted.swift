@@ -6,10 +6,6 @@ public struct FontAwesomeSelfHosted: FontAwesomeLoader {
     public let `defer`: Defer
     public let async: Async
 
-    public var loadingStrategy: LoadingStrategy {
-        .selfHosted(path: cssPath)
-    }
-
     public init(
         cssPath: Href,
         jsPath: Src? = nil,
@@ -20,6 +16,12 @@ public struct FontAwesomeSelfHosted: FontAwesomeLoader {
         self.jsPath = jsPath
         self.defer = `defer`
         self.async = async
+    }
+}
+
+extension FontAwesomeSelfHosted {
+    public var loadingStrategy: LoadingStrategy {
+        .selfHosted(path: cssPath)
     }
 
     public var body: some HTML.View {

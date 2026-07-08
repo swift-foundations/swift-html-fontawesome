@@ -14,7 +14,9 @@ public enum FontAwesomeSize: Sendable {
     case x9
     case x10
     case custom(String)
+}
 
+extension FontAwesomeSize {
     public var className: String? {
         switch self {
         case .normal:

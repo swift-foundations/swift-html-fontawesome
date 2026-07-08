@@ -9,7 +9,9 @@ public enum FontAwesomeAnimation: String, Sendable, CaseIterable {
     case spin = "fa-spin"
     case spinPulse = "fa-spin-pulse"
     case spinReverse = "fa-spin-reverse"
+}
 
+extension FontAwesomeAnimation {
     public var className: String {
         self.rawValue
     }
@@ -20,7 +22,9 @@ public enum FontAwesomeRotation: String, Sendable, CaseIterable {
     case rotate180 = "fa-rotate-180"
     case rotate270 = "fa-rotate-270"
     case rotateBy = "fa-rotate-by"
+}
 
+extension FontAwesomeRotation {
     public var className: String {
         self.rawValue
     }
@@ -30,7 +34,9 @@ public enum FontAwesomeFlip: String, Sendable, CaseIterable {
     case horizontal = "fa-flip-horizontal"
     case vertical = "fa-flip-vertical"
     case both = "fa-flip-both"
+}
 
+extension FontAwesomeFlip {
     public var className: String {
         self.rawValue
     }
@@ -39,7 +45,9 @@ public enum FontAwesomeFlip: String, Sendable, CaseIterable {
 public enum FontAwesomePull: String, Sendable, CaseIterable {
     case left = "fa-pull-left"
     case right = "fa-pull-right"
+}
 
+extension FontAwesomePull {
     public var className: String {
         self.rawValue
     }

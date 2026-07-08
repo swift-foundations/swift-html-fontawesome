@@ -33,11 +33,6 @@ public struct FontAwesomeStackItem: HTML.View {
     let size: StackItemSize
     let inverse: Bool
 
-    public enum StackItemSize: String {
-        case x1 = "fa-stack-1x"
-        case x2 = "fa-stack-2x"
-    }
-
     public init(
         icon: FontAwesomeIcon,
         size: StackItemSize = .x1,
@@ -46,6 +41,13 @@ public struct FontAwesomeStackItem: HTML.View {
         self.icon = icon
         self.size = size
         self.inverse = inverse
+    }
+}
+
+extension FontAwesomeStackItem {
+    public enum StackItemSize: String {
+        case x1 = "fa-stack-1x"
+        case x2 = "fa-stack-2x"
     }
 
     public var body: some HTML.View {
