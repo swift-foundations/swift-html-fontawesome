@@ -1,6 +1,6 @@
 import HTML
 
-public struct FontAwesomeDuotone: HTML {
+public struct FontAwesomeDuotone: HTML.View {
     let icon: String
     let primaryColor: String?
     let primaryOpacity: Double?
@@ -24,9 +24,9 @@ public struct FontAwesomeDuotone: HTML {
         self.size = size
     }
 
-    public var body: some HTML {
+    public var body: some HTML.View {
         i {
-            HTMLEmpty()
+            HTML.Empty()
         }
         .attribute("class", classString)
         .style(styleString)

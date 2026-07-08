@@ -10,10 +10,10 @@
     import HTML
 
     #Preview {
-        HTMLDocument {
+        HTML.Document {
             div {
                 FontAwesomeIcon.coffee.size(.x5).style(.solid)
-                h4 { "Coffee" }.marginTop(.em(0.25))
+                h4 { "Coffee" }.css.marginTop(.em(0.25))
                 p {
 
                     let link = a(
@@ -33,7 +33,7 @@
                     // swiftlint:enable force_try
                 }
             }
-            .textAlign(.center)
+            .css.textAlign(.center)
 
         } head: {
             FontAwesomeCDN()

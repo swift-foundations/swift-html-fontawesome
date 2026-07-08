@@ -1,18 +1,18 @@
 import HTML
 
-public struct FontAwesomeList<Content: HTML>: HTML {
+public struct FontAwesomeList<Content: HTML.View>: HTML.View {
     let icon: FontAwesomeIcon?
     let content: Content
 
     public init(
         icon: FontAwesomeIcon? = nil,
-        @HTMLBuilder content: () -> Content
+        @HTML.Builder content: () -> Content
     ) {
         self.icon = icon
         self.content = content()
     }
 
-    public var body: some HTML {
+    public var body: some HTML.View {
         ul {
             content
         }
@@ -20,13 +20,13 @@ public struct FontAwesomeList<Content: HTML>: HTML {
     }
 }
 
-public struct FontAwesomeListItem<Content: HTML>: HTML {
+public struct FontAwesomeListItem<Content: HTML.View>: HTML.View {
     let icon: FontAwesomeIcon
     let content: Content
 
     public init(
         icon: FontAwesomeIcon,
-        @HTMLBuilder content: () -> Content
+        @HTML.Builder content: () -> Content
     ) {
         self.icon = icon
         self.content = content()
@@ -35,12 +35,12 @@ public struct FontAwesomeListItem<Content: HTML>: HTML {
     public init(
         icon: FontAwesomeIcon,
         _ text: String
-    ) where Content == HTMLText {
+    ) where Content == HTML.Text {
         self.icon = icon
-        self.content = HTMLText(text)
+        self.content = HTML.Text(text)
     }
 
-    public var body: some HTML {
+    public var body: some HTML.View {
         li {
             span {
                 icon

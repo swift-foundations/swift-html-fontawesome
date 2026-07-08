@@ -4,9 +4,9 @@ import Testing
 
 @testable import HTMLFontAwesome
 
-extension HTML {
+extension HTML.View {
     func renderString() -> String {
-        String(decoding: render(), as: UTF8.self)
+        String(decoding: [UInt8](self), as: UTF8.self)
     }
 }
 

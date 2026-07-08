@@ -1,18 +1,18 @@
 import HTML
 
-public struct FontAwesomeStack<Content: HTML>: HTML {
+public struct FontAwesomeStack<Content: HTML.View>: HTML.View {
     let content: Content
     let size: FontAwesomeSize?
 
     public init(
         size: FontAwesomeSize? = nil,
-        @HTMLBuilder content: () -> Content
+        @HTML.Builder content: () -> Content
     ) {
         self.size = size
         self.content = content()
     }
 
-    public var body: some HTML {
+    public var body: some HTML.View {
         span {
             content
         }
@@ -28,7 +28,7 @@ public struct FontAwesomeStack<Content: HTML>: HTML {
     }
 }
 
-public struct FontAwesomeStackItem: HTML {
+public struct FontAwesomeStackItem: HTML.View {
     let icon: FontAwesomeIcon
     let size: StackItemSize
     let inverse: Bool
@@ -48,7 +48,7 @@ public struct FontAwesomeStackItem: HTML {
         self.inverse = inverse
     }
 
-    public var body: some HTML {
+    public var body: some HTML.View {
         icon.addClass(size.rawValue)
             .addClass(inverse ? "fa-inverse" : "")
     }

@@ -1,6 +1,6 @@
 import HTML
 
-public struct FontAwesomeButton<Content: HTML>: HTML {
+public struct FontAwesomeButton<Content: HTML.View>: HTML.View {
     public enum IconPosition {
         case leading
         case trailing
@@ -15,7 +15,7 @@ public struct FontAwesomeButton<Content: HTML>: HTML {
         icon: FontAwesomeIcon,
         iconPosition: IconPosition = .leading,
         spacing: LengthPercentage = .rem(0.5),
-        @HTMLBuilder content: () -> Content
+        @HTML.Builder content: () -> Content
     ) {
         self.icon = icon
         self.iconPosition = iconPosition
@@ -28,25 +28,25 @@ public struct FontAwesomeButton<Content: HTML>: HTML {
         _ text: String,
         iconPosition: IconPosition = .leading,
         spacing: LengthPercentage = .rem(0.5)
-    ) where Content == HTMLText {
+    ) where Content == HTML.Text {
         self.icon = icon
         self.iconPosition = iconPosition
         self.spacing = spacing
-        self.content = HTMLText(text)
+        self.content = HTML.Text(text)
     }
 
-    public var body: some HTML {
+    public var body: some HTML.View {
         button {
             switch iconPosition {
             case .leading:
                 icon
-                    .marginRight(.lengthPercentage(spacing))
+                    .css.marginRight(.lengthPercentage(spacing))
                 content
 
             case .trailing:
                 content
                 icon
-                    .marginLeft(.lengthPercentage(spacing))
+                    .css.marginLeft(.lengthPercentage(spacing))
             }
         }
     }

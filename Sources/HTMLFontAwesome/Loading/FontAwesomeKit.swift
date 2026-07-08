@@ -19,7 +19,7 @@ public struct FontAwesomeKit: FontAwesomeLoader {
         self.crossorigin = crossorigin
     }
 
-    public var body: some HTML {
+    public var body: some HTML.View {
         script(
             src: "https://kit.fontawesome.com/\(kitId).js",
             async: async,

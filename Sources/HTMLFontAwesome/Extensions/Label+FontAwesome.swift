@@ -1,6 +1,6 @@
 import HTML
 
-public struct FontAwesomeLabel<Title: HTML>: HTML {
+public struct FontAwesomeLabel<Title: HTML.View>: HTML.View {
     let icon: FontAwesomeIcon
     let title: Title
     let spacing: LengthPercentage
@@ -18,7 +18,7 @@ public struct FontAwesomeLabel<Title: HTML>: HTML {
         spacing: LengthPercentage = .rem(0.25),
         alignment: AlignItems = .center,
         iconPosition: IconPosition = .leading,
-        @HTMLBuilder title: () -> Title
+        @HTML.Builder title: () -> Title
     ) {
         self.icon = icon
         self.spacing = spacing
@@ -33,15 +33,15 @@ public struct FontAwesomeLabel<Title: HTML>: HTML {
         spacing: LengthPercentage = .rem(0.25),
         alignment: AlignItems = .center,
         iconPosition: IconPosition = .leading
-    ) where Title == HTMLText {
+    ) where Title == HTML.Text {
         self.icon = icon
         self.spacing = spacing
         self.alignment = alignment
         self.iconPosition = iconPosition
-        self.title = HTMLText(text)
+        self.title = HTML.Text(text)
     }
 
-    public var body: some HTML {
+    public var body: some HTML.View {
         span {
             switch iconPosition {
             case .leading:
@@ -49,17 +49,17 @@ public struct FontAwesomeLabel<Title: HTML>: HTML {
                 span {
                     title
                 }
-                .marginLeft(.lengthPercentage(spacing))
+                .css.marginLeft(.lengthPercentage(spacing))
 
             case .trailing:
                 span {
                     title
                 }
-                .marginRight(.lengthPercentage(spacing))
+                .css.marginRight(.lengthPercentage(spacing))
                 icon
             }
         }
-        .display(.inlineFlex)
+        .css.display(.inlineFlex)
         .alignItems(alignment)
     }
 }

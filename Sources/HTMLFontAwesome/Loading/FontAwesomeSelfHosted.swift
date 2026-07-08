@@ -22,8 +22,8 @@ public struct FontAwesomeSelfHosted: FontAwesomeLoader {
         self.async = async
     }
 
-    public var body: some HTML {
-        HTMLGroup {
+    public var body: some HTML.View {
+        HTML.Group {
             link(
                 href: cssPath,
                 rel: "stylesheet"

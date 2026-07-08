@@ -25,7 +25,7 @@ public struct FontAwesomeCDN: FontAwesomeLoader {
         self.async = async
     }
 
-    public var body: some HTML {
+    public var body: some HTML.View {
         link(
             crossorigin: crossorigin,
             href: .init(
@@ -64,7 +64,7 @@ public struct FontAwesomeCDNScript: FontAwesomeLoader {
         self.async = async
     }
 
-    public var body: some HTML {
+    public var body: some HTML.View {
         script(
             src: .init(
                 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/\(version)/js/all.min.js"

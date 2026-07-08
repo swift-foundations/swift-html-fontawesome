@@ -1,6 +1,6 @@
 import HTML
 
-public struct FontAwesomeIcon: HTML, Sendable {
+public struct FontAwesomeIcon: HTML.View, Sendable {
     let name: String
     let style: FontAwesomeStyle
     let size: FontAwesomeSize?
@@ -45,7 +45,7 @@ public struct FontAwesomeIcon: HTML, Sendable {
         self.title = title
     }
 
-    public var body: some HTML {
+    public var body: some HTML.View {
         i {}
             .attribute("class", classString)
             .attribute("aria-label", ariaLabel)

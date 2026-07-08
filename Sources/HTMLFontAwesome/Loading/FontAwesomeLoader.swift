@@ -1,6 +1,6 @@
 import HTML
 
-public protocol FontAwesomeLoader: HTML {
+public protocol FontAwesomeLoader: HTML.View {
     var loadingStrategy: LoadingStrategy { get }
 }
 
