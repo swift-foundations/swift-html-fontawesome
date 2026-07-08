@@ -321,7 +321,7 @@ extension FontAwesomeIcon {
     public static let whatsapp = FontAwesomeIcon("whatsapp", style: .brands)
     public static let telegram = FontAwesomeIcon("telegram", style: .brands)
     public static let skype = FontAwesomeIcon("skype", style: .brands)
-    public static let apple_brand = FontAwesomeIcon("apple", style: .brands)
+    public static let appleBrand = FontAwesomeIcon("apple", style: .brands)
     public static let windows = FontAwesomeIcon("windows", style: .brands)
     public static let linux = FontAwesomeIcon("linux", style: .brands)
     public static let android = FontAwesomeIcon("android", style: .brands)
