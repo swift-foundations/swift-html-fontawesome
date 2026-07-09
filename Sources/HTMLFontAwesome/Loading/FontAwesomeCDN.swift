@@ -61,6 +61,12 @@ public struct FontAwesomeCDNScript: FontAwesomeLoader {
         self.defer = `defer`
         self.async = async
     }
+}
+
+extension FontAwesomeCDNScript {
+    public var loadingStrategy: LoadingStrategy {
+        .cdn(version: version)
+    }
 
     public var body: some HTML.View {
         script(
@@ -84,11 +90,5 @@ public struct FontAwesomeCDNScript: FontAwesomeLoader {
             rel: .stylesheet
         )
 
-    }
-}
-
-extension FontAwesomeCDNScript {
-    public var loadingStrategy: LoadingStrategy {
-        .cdn(version: version)
     }
 }
