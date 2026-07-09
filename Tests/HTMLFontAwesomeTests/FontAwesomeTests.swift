@@ -10,8 +10,9 @@ extension HTML.View {
     }
 }
 
-@Suite("FontAwesome Icon Tests")
-struct FontAwesomeIconTests {
+extension FontAwesomeIcon {
+    @Suite("FontAwesome Icon Tests")
+    struct Test {
 
     @Test
     func `Basic icon creation`() {
@@ -130,6 +131,7 @@ struct FontAwesomeIconTests {
         #expect(html.contains("fa-border"))
         #expect(html.contains("custom-class"))
     }
+    }
 }
 
 @Suite("FontAwesome Loading Tests")
@@ -232,8 +234,9 @@ struct FontAwesomeComponentTests {
     }
 }
 
-@Suite("FontAwesome Style Tests")
-struct FontAwesomeStyleTests {
+extension FontAwesomeStyle {
+    @Suite("FontAwesome Style Tests")
+    struct Test {
 
     @Test
     func `Style class names`() {
@@ -263,10 +266,12 @@ struct FontAwesomeStyleTests {
         #expect(FontAwesomeStyle.thin.isPro == true)
         #expect(FontAwesomeStyle.duotone.isPro == true)
     }
+    }
 }
 
-@Suite("FontAwesome Size Tests")
-struct FontAwesomeSizeTests {
+extension FontAwesomeSize {
+    @Suite("FontAwesome Size Tests")
+    struct Test {
 
     @Test
     func `Size class names`() {
@@ -279,10 +284,12 @@ struct FontAwesomeSizeTests {
         #expect(FontAwesomeSize.x10.className == "fa-10x")
         #expect(FontAwesomeSize.custom("my-size").className == "my-size")
     }
+    }
 }
 
-@Suite("FontAwesome Animation Tests")
-struct FontAwesomeAnimationTests {
+extension FontAwesomeAnimation {
+    @Suite("FontAwesome Animation Tests")
+    struct Test {
 
     @Test
     func `Animation class names`() {
@@ -308,5 +315,6 @@ struct FontAwesomeAnimationTests {
         #expect(FontAwesomeFlip.horizontal.className == "fa-flip-horizontal")
         #expect(FontAwesomeFlip.vertical.className == "fa-flip-vertical")
         #expect(FontAwesomeFlip.both.className == "fa-flip-both")
+    }
     }
 }
