@@ -14,123 +14,123 @@ extension FontAwesomeIcon {
     @Suite("FontAwesome Icon Tests")
     struct Test {
 
-    @Test
-    func `Basic icon creation`() {
-        let icon = FontAwesomeIcon("check")
-        let html = icon.renderString()
-        #expect(html.contains("fas"))
-        #expect(html.contains("fa-check"))
-    }
+        @Test
+        func `Basic icon creation`() {
+            let icon = FontAwesomeIcon("check")
+            let html = icon.renderString()
+            #expect(html.contains("fas"))
+            #expect(html.contains("fa-check"))
+        }
 
-    @Test
-    func `Icon with custom style`() {
-        let icon = FontAwesomeIcon("heart", style: .regular)
-        let html = icon.renderString()
-        #expect(html.contains("far"))
-        #expect(html.contains("fa-heart"))
-    }
+        @Test
+        func `Icon with custom style`() {
+            let icon = FontAwesomeIcon("heart", style: .regular)
+            let html = icon.renderString()
+            #expect(html.contains("far"))
+            #expect(html.contains("fa-heart"))
+        }
 
-    @Test
-    func `Icon with size`() {
-        let icon = FontAwesomeIcon("star", size: .x2)
-        let html = icon.renderString()
-        #expect(html.contains("fa-2x"))
-    }
+        @Test
+        func `Icon with size`() {
+            let icon = FontAwesomeIcon("star", size: .x2)
+            let html = icon.renderString()
+            #expect(html.contains("fa-2x"))
+        }
 
-    @Test
-    func `Icon with animation`() {
-        let icon = FontAwesomeIcon("spinner").animate(.spin)
-        let html = icon.renderString()
-        #expect(html.contains("fa-spin"))
-    }
+        @Test
+        func `Icon with animation`() {
+            let icon = FontAwesomeIcon("spinner").animate(.spin)
+            let html = icon.renderString()
+            #expect(html.contains("fa-spin"))
+        }
 
-    @Test
-    func `Icon with rotation`() {
-        let icon = FontAwesomeIcon("shield").rotate(.rotate90)
-        let html = icon.renderString()
-        #expect(html.contains("fa-rotate-90"))
-    }
+        @Test
+        func `Icon with rotation`() {
+            let icon = FontAwesomeIcon("shield").rotate(.rotate90)
+            let html = icon.renderString()
+            #expect(html.contains("fa-rotate-90"))
+        }
 
-    @Test
-    func `Icon with flip`() {
-        let icon = FontAwesomeIcon("shield").flip(.horizontal)
-        let html = icon.renderString()
-        #expect(html.contains("fa-flip-horizontal"))
-    }
+        @Test
+        func `Icon with flip`() {
+            let icon = FontAwesomeIcon("shield").flip(.horizontal)
+            let html = icon.renderString()
+            #expect(html.contains("fa-flip-horizontal"))
+        }
 
-    @Test
-    func `Fixed width icon`() {
-        let icon = FontAwesomeIcon("home").fixedWidth()
-        let html = icon.renderString()
-        #expect(html.contains("fa-fw"))
-    }
+        @Test
+        func `Fixed width icon`() {
+            let icon = FontAwesomeIcon("home").fixedWidth()
+            let html = icon.renderString()
+            #expect(html.contains("fa-fw"))
+        }
 
-    @Test
-    func `Icon with border`() {
-        let icon = FontAwesomeIcon("quote").border()
-        let html = icon.renderString()
-        #expect(html.contains("fa-border"))
-    }
+        @Test
+        func `Icon with border`() {
+            let icon = FontAwesomeIcon("quote").border()
+            let html = icon.renderString()
+            #expect(html.contains("fa-border"))
+        }
 
-    @Test
-    func `Icon with ARIA label`() {
-        let icon = FontAwesomeIcon("trash").ariaLabel("Delete item")
-        let html = icon.renderString()
-        #expect(html.contains("aria-label=\"Delete item\""))
-    }
+        @Test
+        func `Icon with ARIA label`() {
+            let icon = FontAwesomeIcon("trash").ariaLabel("Delete item")
+            let html = icon.renderString()
+            #expect(html.contains("aria-label=\"Delete item\""))
+        }
 
-    @Test
-    func `Icon with ARIA hidden`() {
-        let icon = FontAwesomeIcon("star").ariaHidden()
-        let html = icon.renderString()
-        #expect(html.contains("aria-hidden=\"true\""))
-    }
+        @Test
+        func `Icon with ARIA hidden`() {
+            let icon = FontAwesomeIcon("star").ariaHidden()
+            let html = icon.renderString()
+            #expect(html.contains("aria-hidden=\"true\""))
+        }
 
-    @Test
-    func `Icon with title`() {
-        let icon = FontAwesomeIcon("info").title("More information")
-        let html = icon.renderString()
-        #expect(html.contains("title=\"More information\""))
-    }
+        @Test
+        func `Icon with title`() {
+            let icon = FontAwesomeIcon("info").title("More information")
+            let html = icon.renderString()
+            #expect(html.contains("title=\"More information\""))
+        }
 
-    @Test
-    func `Icon from string literal`() {
-        let icon: FontAwesomeIcon = "check"
-        let html = icon.renderString()
-        #expect(html.contains("fa-check"))
-    }
+        @Test
+        func `Icon from string literal`() {
+            let icon: FontAwesomeIcon = "check"
+            let html = icon.renderString()
+            #expect(html.contains("fa-check"))
+        }
 
-    @Test
-    func `Common icon static properties`() {
-        let checkIcon = FontAwesomeIcon.check
-        let html = checkIcon.renderString()
-        #expect(html.contains("fa-check"))
+        @Test
+        func `Common icon static properties`() {
+            let checkIcon = FontAwesomeIcon.check
+            let html = checkIcon.renderString()
+            #expect(html.contains("fa-check"))
 
-        let githubIcon = FontAwesomeIcon.github
-        let githubHtml = githubIcon.renderString()
-        #expect(githubHtml.contains("fab"))
-        #expect(githubHtml.contains("fa-github"))
-    }
+            let githubIcon = FontAwesomeIcon.github
+            let githubHtml = githubIcon.renderString()
+            #expect(githubHtml.contains("fab"))
+            #expect(githubHtml.contains("fa-github"))
+        }
 
-    @Test
-    func `Fluent API chaining`() {
-        let icon = FontAwesomeIcon("user")
-            .size(.large)
-            .style(.regular)
-            .animate(.pulse)
-            .fixedWidth()
-            .border()
-            .ariaLabel("User profile")
-            .addClass("custom-class")
+        @Test
+        func `Fluent API chaining`() {
+            let icon = FontAwesomeIcon("user")
+                .size(.large)
+                .style(.regular)
+                .animate(.pulse)
+                .fixedWidth()
+                .border()
+                .ariaLabel("User profile")
+                .addClass("custom-class")
 
-        let html = icon.renderString()
-        #expect(html.contains("fa-lg"))
-        #expect(html.contains("far"))
-        #expect(html.contains("fa-pulse"))
-        #expect(html.contains("fa-fw"))
-        #expect(html.contains("fa-border"))
-        #expect(html.contains("custom-class"))
-    }
+            let html = icon.renderString()
+            #expect(html.contains("fa-lg"))
+            #expect(html.contains("far"))
+            #expect(html.contains("fa-pulse"))
+            #expect(html.contains("fa-fw"))
+            #expect(html.contains("fa-border"))
+            #expect(html.contains("custom-class"))
+        }
     }
 }
 
@@ -238,34 +238,34 @@ extension FontAwesomeStyle {
     @Suite("FontAwesome Style Tests")
     struct Test {
 
-    @Test
-    func `Style class names`() {
-        #expect(FontAwesomeStyle.solid.className == "fas")
-        #expect(FontAwesomeStyle.regular.className == "far")
-        #expect(FontAwesomeStyle.light.className == "fal")
-        #expect(FontAwesomeStyle.thin.className == "fat")
-        #expect(FontAwesomeStyle.duotone.className == "fad")
-        #expect(FontAwesomeStyle.brands.className == "fab")
-    }
+        @Test
+        func `Style class names`() {
+            #expect(FontAwesomeStyle.solid.className == "fas")
+            #expect(FontAwesomeStyle.regular.className == "far")
+            #expect(FontAwesomeStyle.light.className == "fal")
+            #expect(FontAwesomeStyle.thin.className == "fat")
+            #expect(FontAwesomeStyle.duotone.className == "fad")
+            #expect(FontAwesomeStyle.brands.className == "fab")
+        }
 
-    @Test
-    func `Sharp style class names`() {
-        #expect(FontAwesomeSharpStyle.solid.className == "fass")
-        #expect(FontAwesomeSharpStyle.regular.className == "fasr")
-        #expect(FontAwesomeSharpStyle.light.className == "fasl")
-        #expect(FontAwesomeSharpStyle.thin.className == "fast")
-        #expect(FontAwesomeSharpStyle.duotone.className == "fasd")
-    }
+        @Test
+        func `Sharp style class names`() {
+            #expect(FontAwesomeSharpStyle.solid.className == "fass")
+            #expect(FontAwesomeSharpStyle.regular.className == "fasr")
+            #expect(FontAwesomeSharpStyle.light.className == "fasl")
+            #expect(FontAwesomeSharpStyle.thin.className == "fast")
+            #expect(FontAwesomeSharpStyle.duotone.className == "fasd")
+        }
 
-    @Test
-    func `Pro style detection`() {
-        #expect(FontAwesomeStyle.solid.isPro == false)
-        #expect(FontAwesomeStyle.regular.isPro == false)
-        #expect(FontAwesomeStyle.brands.isPro == false)
-        #expect(FontAwesomeStyle.light.isPro == true)
-        #expect(FontAwesomeStyle.thin.isPro == true)
-        #expect(FontAwesomeStyle.duotone.isPro == true)
-    }
+        @Test
+        func `Pro style detection`() {
+            #expect(FontAwesomeStyle.solid.isPro == false)
+            #expect(FontAwesomeStyle.regular.isPro == false)
+            #expect(FontAwesomeStyle.brands.isPro == false)
+            #expect(FontAwesomeStyle.light.isPro == true)
+            #expect(FontAwesomeStyle.thin.isPro == true)
+            #expect(FontAwesomeStyle.duotone.isPro == true)
+        }
     }
 }
 
@@ -273,17 +273,17 @@ extension FontAwesomeSize {
     @Suite("FontAwesome Size Tests")
     struct Test {
 
-    @Test
-    func `Size class names`() {
-        #expect(FontAwesomeSize.normal.className == nil)
-        #expect(FontAwesomeSize.extraSmall.className == "fa-xs")
-        #expect(FontAwesomeSize.small.className == "fa-sm")
-        #expect(FontAwesomeSize.large.className == "fa-lg")
-        #expect(FontAwesomeSize.extraLarge.className == "fa-xl")
-        #expect(FontAwesomeSize.x2.className == "fa-2x")
-        #expect(FontAwesomeSize.x10.className == "fa-10x")
-        #expect(FontAwesomeSize.custom("my-size").className == "my-size")
-    }
+        @Test
+        func `Size class names`() {
+            #expect(FontAwesomeSize.normal.className == nil)
+            #expect(FontAwesomeSize.extraSmall.className == "fa-xs")
+            #expect(FontAwesomeSize.small.className == "fa-sm")
+            #expect(FontAwesomeSize.large.className == "fa-lg")
+            #expect(FontAwesomeSize.extraLarge.className == "fa-xl")
+            #expect(FontAwesomeSize.x2.className == "fa-2x")
+            #expect(FontAwesomeSize.x10.className == "fa-10x")
+            #expect(FontAwesomeSize.custom("my-size").className == "my-size")
+        }
     }
 }
 
@@ -291,30 +291,30 @@ extension FontAwesomeAnimation {
     @Suite("FontAwesome Animation Tests")
     struct Test {
 
-    @Test
-    func `Animation class names`() {
-        #expect(FontAwesomeAnimation.beat.className == "fa-beat")
-        #expect(FontAwesomeAnimation.bounce.className == "fa-bounce")
-        #expect(FontAwesomeAnimation.fade.className == "fa-fade")
-        #expect(FontAwesomeAnimation.flip.className == "fa-flip")
-        #expect(FontAwesomeAnimation.pulse.className == "fa-pulse")
-        #expect(FontAwesomeAnimation.shake.className == "fa-shake")
-        #expect(FontAwesomeAnimation.spin.className == "fa-spin")
-        #expect(FontAwesomeAnimation.spinReverse.className == "fa-spin-reverse")
-    }
+        @Test
+        func `Animation class names`() {
+            #expect(FontAwesomeAnimation.beat.className == "fa-beat")
+            #expect(FontAwesomeAnimation.bounce.className == "fa-bounce")
+            #expect(FontAwesomeAnimation.fade.className == "fa-fade")
+            #expect(FontAwesomeAnimation.flip.className == "fa-flip")
+            #expect(FontAwesomeAnimation.pulse.className == "fa-pulse")
+            #expect(FontAwesomeAnimation.shake.className == "fa-shake")
+            #expect(FontAwesomeAnimation.spin.className == "fa-spin")
+            #expect(FontAwesomeAnimation.spinReverse.className == "fa-spin-reverse")
+        }
 
-    @Test
-    func `Rotation class names`() {
-        #expect(FontAwesomeRotation.rotate90.className == "fa-rotate-90")
-        #expect(FontAwesomeRotation.rotate180.className == "fa-rotate-180")
-        #expect(FontAwesomeRotation.rotate270.className == "fa-rotate-270")
-    }
+        @Test
+        func `Rotation class names`() {
+            #expect(FontAwesomeRotation.rotate90.className == "fa-rotate-90")
+            #expect(FontAwesomeRotation.rotate180.className == "fa-rotate-180")
+            #expect(FontAwesomeRotation.rotate270.className == "fa-rotate-270")
+        }
 
-    @Test
-    func `Flip class names`() {
-        #expect(FontAwesomeFlip.horizontal.className == "fa-flip-horizontal")
-        #expect(FontAwesomeFlip.vertical.className == "fa-flip-vertical")
-        #expect(FontAwesomeFlip.both.className == "fa-flip-both")
-    }
+        @Test
+        func `Flip class names`() {
+            #expect(FontAwesomeFlip.horizontal.className == "fa-flip-horizontal")
+            #expect(FontAwesomeFlip.vertical.className == "fa-flip-vertical")
+            #expect(FontAwesomeFlip.both.className == "fa-flip-both")
+        }
     }
 }
