@@ -69,26 +69,27 @@ extension FontAwesomeCDNScript {
     }
 
     public var body: some HTML.View {
-        script(
-            src: .init(
-                "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/\(version)/js/all.min.js"
-            ),
-            async: async,
-            defer: `defer`,
-            integrity: integrity,
-            referrerpolicy: .noReferrer,
-            crossorigin: crossorigin
-        )
+        HTML.Group {
+            script(
+                src: .init(
+                    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/\(version)/js/all.min.js"
+                ),
+                async: async,
+                defer: `defer`,
+                integrity: integrity,
+                referrerpolicy: .noReferrer,
+                crossorigin: crossorigin
+            )
 
-        link(
-            crossorigin: crossorigin,
-            href: .init(
-                "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/\(version)/css/all.min.css"
-            ),
-            integrity: integrity,
-            referrerpolicy: .noReferrer,
-            rel: .stylesheet
-        )
-
+            link(
+                crossorigin: crossorigin,
+                href: .init(
+                    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/\(version)/css/all.min.css"
+                ),
+                integrity: integrity,
+                referrerpolicy: .noReferrer,
+                rel: .stylesheet
+            )
+        }
     }
 }
