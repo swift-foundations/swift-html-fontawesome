@@ -11,7 +11,7 @@ extension HTML.View {
 }
 
 extension FontAwesomeIcon {
-    @Suite("FontAwesome Icon Tests")
+    @Suite
     struct Test {
 
         @Test
@@ -134,8 +134,8 @@ extension FontAwesomeIcon {
     }
 }
 
-@Suite("FontAwesome Loading Tests")
-struct FontAwesomeLoadingTests {
+@Suite
+struct Test {
 
     @Test
     func `CDN loader`() {
@@ -174,8 +174,8 @@ struct FontAwesomeLoadingTests {
     }
 }
 
-@Suite("FontAwesome Component Tests")
-struct FontAwesomeComponentTests {
+@Suite
+struct Test {
 
     @Test
     func `Button with icon`() {
@@ -235,7 +235,7 @@ struct FontAwesomeComponentTests {
 }
 
 extension FontAwesomeStyle {
-    @Suite("FontAwesome Style Tests")
+    @Suite
     struct Test {
 
         @Test
@@ -270,7 +270,7 @@ extension FontAwesomeStyle {
 }
 
 extension FontAwesomeSize {
-    @Suite("FontAwesome Size Tests")
+    @Suite
     struct Test {
 
         @Test
@@ -288,7 +288,7 @@ extension FontAwesomeSize {
 }
 
 extension FontAwesomeAnimation {
-    @Suite("FontAwesome Animation Tests")
+    @Suite
     struct Test {
 
         @Test

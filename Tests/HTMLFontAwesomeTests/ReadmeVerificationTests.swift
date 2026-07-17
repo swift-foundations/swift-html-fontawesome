@@ -2,8 +2,8 @@ import Testing
 
 @testable import HTMLFontAwesome
 
-@Suite("README Verification")
-struct ReadmeVerificationTests {
+@Suite
+struct Test {
 
     // MARK: - Loading FontAwesome (lines 54-65)
 
