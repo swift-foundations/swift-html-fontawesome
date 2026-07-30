@@ -135,7 +135,7 @@ extension FontAwesomeIcon {
 }
 
 @Suite
-struct Test {
+struct LoaderTests {
 
     @Test
     func `CDN loader`() {
@@ -175,7 +175,7 @@ struct Test {
 }
 
 @Suite
-struct Test {
+struct ComponentTests {
 
     @Test
     func `Button with icon`() {
