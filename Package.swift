@@ -17,12 +17,12 @@ extension Target.Dependency {
 let package = Package(
     name: "swift-html-fontawesome",
     platforms: [
-        .macOS("26.0"),
-        .iOS("26.0"),
-        .tvOS("26.0"),
-        .watchOS("26.0"),
+        .macOS("27"),
+        .iOS("27"),
+        .tvOS("27"),
+        .watchOS("27"),
         .macCatalyst("26.0"),
-        .visionOS("26.0")
+        .visionOS("27")
     ],
     products: [
         .library(
