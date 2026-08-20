@@ -2,17 +2,17 @@ import HTML
 
 public struct FontAwesomeCDN: FontAwesomeLoader {
     public let version: String
-    public let integrity: Integrity?
-    public let crossorigin: Crossorigin?
-    public let `defer`: Defer
-    public let async: Async
+    public let integrity: HTML.Integrity.Attribute?
+    public let crossorigin: HTML.Crossorigin.Attribute?
+    public let `defer`: HTML.Defer.Attribute
+    public let async: HTML.Async.Attribute
 
     public init(
         version: String = "6.5.1",
-        integrity: Integrity? = nil,
-        crossorigin: Crossorigin? = "anonymous",
-        defer: Defer = true,
-        async: Async = false
+        integrity: HTML.Integrity.Attribute? = nil,
+        crossorigin: HTML.Crossorigin.Attribute? = "anonymous",
+        defer: HTML.Defer.Attribute = true,
+        async: HTML.Async.Attribute = false
     ) {
         self.version = version
         self.integrity = integrity
@@ -37,23 +37,23 @@ extension FontAwesomeCDN {
             referrerpolicy: .noReferrer,
             rel: .stylesheet
         )
-        .attribute(Defer.attribute, `defer`.description)
+        .attribute(HTML.Defer.Attribute.attribute, `defer`.description)
     }
 }
 
 public struct FontAwesomeCDNScript: FontAwesomeLoader {
     public let version: String
-    public let integrity: Integrity?
-    public let crossorigin: Crossorigin?
-    public let `defer`: Defer
-    public let async: Async
+    public let integrity: HTML.Integrity.Attribute?
+    public let crossorigin: HTML.Crossorigin.Attribute?
+    public let `defer`: HTML.Defer.Attribute
+    public let async: HTML.Async.Attribute
 
     public init(
         version: String = "6.5.1",
-        integrity: Integrity? = nil,
-        crossorigin: Crossorigin? = "anonymous",
-        defer: Defer = true,
-        async: Async = false
+        integrity: HTML.Integrity.Attribute? = nil,
+        crossorigin: HTML.Crossorigin.Attribute? = "anonymous",
+        defer: HTML.Defer.Attribute = true,
+        async: HTML.Async.Attribute = false
     ) {
         self.version = version
         self.integrity = integrity

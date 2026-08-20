@@ -2,13 +2,13 @@ import HTML
 
 public struct FontAwesomeKit: FontAwesomeLoader {
     public let kitId: String
-    public let async: Async
-    public let crossorigin: Crossorigin?
+    public let async: HTML.Async.Attribute
+    public let crossorigin: HTML.Crossorigin.Attribute?
 
     public init(
         kitId: String,
-        async: Async = true,
-        crossorigin: Crossorigin? = "anonymous"
+        async: HTML.Async.Attribute = true,
+        crossorigin: HTML.Crossorigin.Attribute? = "anonymous"
     ) {
         self.kitId = kitId
         self.async = async

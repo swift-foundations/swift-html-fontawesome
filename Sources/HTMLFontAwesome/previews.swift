@@ -37,7 +37,7 @@
 
         } head: {
             FontAwesomeCDN()
-            Meta.utf8
+            HTML.Meta.Element.utf8
         }
     }
 #endif

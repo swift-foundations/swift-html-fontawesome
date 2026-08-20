@@ -1,16 +1,16 @@
 import HTML
 
 public struct FontAwesomeSelfHosted: FontAwesomeLoader {
-    public let cssPath: Href
-    public let jsPath: Src?
-    public let `defer`: Defer
-    public let async: Async
+    public let cssPath: HTML.Href.Attribute
+    public let jsPath: HTML.Src.Attribute?
+    public let `defer`: HTML.Defer.Attribute
+    public let async: HTML.Async.Attribute
 
     public init(
-        cssPath: Href,
-        jsPath: Src? = nil,
-        defer: Defer = true,
-        async: Async = false
+        cssPath: HTML.Href.Attribute,
+        jsPath: HTML.Src.Attribute? = nil,
+        defer: HTML.Defer.Attribute = true,
+        async: HTML.Async.Attribute = false
     ) {
         self.cssPath = cssPath
         self.jsPath = jsPath
