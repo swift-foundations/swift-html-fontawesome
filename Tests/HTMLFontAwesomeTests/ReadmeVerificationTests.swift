@@ -5,8 +5,6 @@ import Testing
 @Suite
 struct Test {
 
-    // MARK: - Loading FontAwesome (lines 54-65)
-
     @Test
     func `Loading FontAwesome - Kit (line 54-55)`() throws {
         let kit = FontAwesomeKit(kitId: "your-kit-id")
@@ -28,8 +26,6 @@ struct Test {
         #expect(selfHosted.cssPath == "/assets/fontawesome/css/all.min.css")
         #expect(selfHosted.jsPath == "/assets/fontawesome/js/all.min.js")
     }
-
-    // MARK: - Basic Icon Usage (lines 70-83)
 
     @Test
     func `Basic Icon Usage - Simple icon (line 70-71)`() throws {
@@ -59,8 +55,6 @@ struct Test {
         #expect(envelope.name == "envelope")
     }
 
-    // MARK: - Icon Styles (lines 90-99)
-
     @Test
     func `Icon Styles - Free styles (line 90-93)`() throws {
         let solid = FontAwesomeIcon("house", style: .solid)
@@ -80,8 +74,6 @@ struct Test {
         #expect(thin.style == .thin)
         #expect(duotone.style == .duotone)
     }
-
-    // MARK: - Animations and Transforms (lines 104-114)
 
     @Test
     func `Animations and Transforms - Animations (line 104-107)`() throws {
@@ -105,8 +97,6 @@ struct Test {
         #expect(icon.flip == .horizontal)
     }
 
-    // MARK: - Size Options (lines 118-125)
-
     @Test
     func `Size Options (line 118-125)`() throws {
         let xs = FontAwesomeIcon("star", size: .extraSmall)
@@ -115,7 +105,7 @@ struct Test {
         let xl = FontAwesomeIcon("star", size: .extraLarge)
         let x2 = FontAwesomeIcon("star", size: .x2)
         let x10 = FontAwesomeIcon("star", size: .x10)
-        // Verify icons have sizes set by checking className
+
         #expect(xs.size?.className == "fa-xs")
         #expect(sm.size?.className == "fa-sm")
         #expect(lg.size?.className == "fa-lg")
@@ -123,8 +113,6 @@ struct Test {
         #expect(x2.size?.className == "fa-2x")
         #expect(x10.size?.className == "fa-10x")
     }
-
-    // MARK: - Components (lines 130-154)
 
     @Test
     func `Components - Button with icon (line 130-131)`() throws {
@@ -167,8 +155,6 @@ struct Test {
         #expect(stack.size == nil)
     }
 
-    // MARK: - Accessibility (lines 159-170)
-
     @Test
     func `Accessibility - ARIA label (line 159-161)`() throws {
         let icon = FontAwesomeIcon.trash
@@ -178,7 +164,7 @@ struct Test {
 
     @Test
     func `Accessibility - Title attribute (line 163-165)`() throws {
-        // Create icon with title through initializer
+
         let icon = FontAwesomeIcon("circle-info", title: "More information")
         #expect(icon.title == "More information")
     }
@@ -189,8 +175,6 @@ struct Test {
             .ariaHidden()
         #expect(icon.ariaHidden == true)
     }
-
-    // MARK: - Fixed Width Icons (lines 175-179)
 
     @Test
     func `Fixed Width Icons (line 175-178)`() throws {
